@@ -9,12 +9,14 @@ body {
 }
 
 .wrapper {
-
+    height: 20em;
     display: grid;
     grid-template-columns: 4fr 4fr 5fr;
 
 }
-
+.wrapper > div {
+    height: 100%;
+}
 #box1 {
     background-color: brown;
     outline: 1px solid black;
@@ -36,48 +38,34 @@ body {
     outline: 1px solid black;
 }
 .wrap {
-
+    height: 30%;
     display: grid;
+    
+    grid-template-areas: 
+    'boxi1 boxi1 boxi1'
+    'boxi2 boxi3 boxi4'
+    'boxi2 boxi5 .'
+    'boxi2 . .'
+    ;
+}
+.wrap > div{
+    background-color: lawngreen;
+    outline: 1px solid black;
+}
 
-    grid-template-columns: 1fr 1fr;
-
+.boxi1 {
+    grid-area: boxi1;
+    
 }
-.wrap2 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: 100%;
+.boxi2 {
+    grid-area: boxi2;
 }
-.wrap3 {
-
-    display: grid;
-    grid-template-columns: 40%;
-    grid-auto-rows: 100%;
+.boxi3 {
+    grid-area: boxi3;
 }
-#boxi1 {
-    background-color: lawngreen;
-    outline: 1px solid black;
+.boxi4 {
+    grid-area: boxi4;
 }
-#boxi2 {
-    background-color: lawngreen;
-    outline: 1px solid black;
-}
-#boxi3 {
-    background-color: lawngreen;
-    outline: 1px solid black;
-    height: 100%;
-}
-#boxi4 {
-    background-color: lawngreen;
-    outline: 1px solid black;
-    height: 100%;
-}
-#boxi5 {
-    background-color: lawngreen;
-    outline: 1px solid black;
-    height: 100%;
-}
-.wraps {
-    display: grid;
-    height: 100%;
-    width: 100%;
+.boxi5 {
+    grid-area: boxi5;
 }
